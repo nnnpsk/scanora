@@ -1,0 +1,187 @@
+🌐 Running Web Feature Baseline Scan...
+
+📂 Scanning 9 file(s):
+  - 9index.html
+  - testan\index.html
+  - src\test.js
+  - src\test.html
+  - src\style.css
+  - src\script.js
+  - src\module.js
+  - src\index.html
+  - src\inn\test.html
+
+🔍 Feature Scan Report:
+
+✅ lang-attr: lang-attr
+   Supported: chrome 1, chrome_android 18, edge 12, firefox 1, firefox_android 4, safari ≤4, safari_ios ≤3.2
+   - 9index.html:2 → "lang"
+   - testan\index.html:2 → "lang"
+   - src\test.html:3 → "lang"
+   - src\index.html:2 → "lang"
+   - src\inn\test.html:3 → "lang"
+✅ has: has
+   Supported: chrome 105, chrome_android 105, edge 105, firefox 121, firefox_android 121, safari 15.4, safari_ios 15.4
+   - 9index.html:7 → ":has()"
+   - 9index.html:7 → ":has"
+   - 9index.html:8 → ":has"
+   - testan\index.html:7 → ":has()"
+   - testan\index.html:7 → ":has"
+   - testan\index.html:8 → ":has"
+   - src\test.html:8 → ":has()"
+   - src\test.html:8 → ":has"
+   - src\test.html:9 → ":has"
+   - src\test.html:52 → ":has()"
+   - src\test.html:52 → ":has"
+   - src\style.css:8 → ":has()"
+   - src\style.css:8 → ":has"
+   - src\style.css:9 → ":has"
+   - src\index.html:7 → ":has()"
+   - src\index.html:7 → ":has"
+   - src\index.html:8 → ":has"
+   - src\inn\test.html:8 → ":has()"
+   - src\inn\test.html:8 → ":has"
+   - src\inn\test.html:9 → ":has"
+   - src\inn\test.html:52 → ":has()"
+   - src\inn\test.html:52 → ":has"
+✅ cascade-layers: cascade-layers
+   Supported: chrome 99, chrome_android 99, edge 99, firefox 97, firefox_android 97, safari 15.4, safari_ios 15.4
+   - 9index.html:12 → "@layer"
+   - 9index.html:13 → "@layer"
+   - testan\index.html:12 → "@layer"
+   - testan\index.html:13 → "@layer"
+   - src\test.html:13 → "@layer"
+   - src\test.html:14 → "@layer"
+   - src\style.css:1 → "cascade layers"
+   - src\style.css:2 → "@layer"
+   - src\index.html:12 → "@layer"
+   - src\index.html:13 → "@layer"
+   - src\inn\test.html:13 → "@layer"
+   - src\inn\test.html:14 → "@layer"
+✅ background: background
+   Supported: chrome 1, chrome_android 18, edge 12, firefox 3.6, firefox_android 4, safari 1.3, safari_ios 1
+   - 9index.html:15 → "background"
+   - testan\index.html:15 → "background"
+   - src\test.html:24 → "background"
+   - src\style.css:10 → "background"
+   - src\index.html:15 → "background"
+   - src\inn\test.html:24 → "background"
+✅ fetch: fetch
+   Supported: chrome 42, chrome_android 42, edge 14, firefox 39, firefox_android 39, safari 10.1, safari_ios 10.3
+   - src\test.js:3 → "fetch"
+   - src\script.js:2 → "fetch"
+❌ js-top-level-await: js-top-level-await
+   Missing: Unknown (feature not tracked in baseline)
+   - src\test.js:3 → "await"
+   - src\script.js:2 → "await"
+   - src\script.js:3 → "await"
+✅ console: console
+   Supported: chrome 1, chrome_android 18, edge 12, firefox 4, firefox_android 4, safari 3, safari_ios 1
+   - src\test.js:4 → "console"
+   - src\test.js:8 → "console"
+   - src\test.js:24 → "console"
+   - src\test.js:38 → "console"
+   - src\script.js:4 → "console"
+   - src\script.js:15 → "console"
+   - src\script.js:18 → "console"
+   - src\module.js:3 → "console"
+❌ js-optional-chaining: js-optional-chaining
+   Missing: Unknown (feature not tracked in baseline)
+   - src\test.js:7 → "optional chaining"
+   - src\script.js:7 → "optional chaining"
+   - src\script.js:10 → "optional chaining"
+❌ js-nullish-coalescing: js-nullish-coalescing
+   Missing: Unknown (feature not tracked in baseline)
+   - src\test.js:7 → "??"
+   - src\script.js:7 → "??"
+   - src\script.js:10 → "??"
+✅ window: window
+   Supported: chrome 1, chrome_android 18, edge 12, firefox 1, firefox_android 4, safari 1, safari_ios 1
+   - src\test.js:11 → "window"
+❌ js-dynamic-import: js-dynamic-import
+   Missing: Unknown (feature not tracked in baseline)
+   - src\test.js:12 → "import()"
+✅ font-family: font-family
+   Supported: chrome 1, chrome_android 18, edge 12, firefox 1, firefox_android 4, safari 1, safari_ios 1
+   - src\test.html:16 → "font-family"
+   - src\style.css:4 → "font-family"
+   - src\inn\test.html:16 → "font-family"
+✅ margin: margin
+   Supported: chrome 1, chrome_android 18, edge 12, firefox 1, firefox_android 4, safari 1, safari_ios 1
+   - src\test.html:17 → "margin"
+   - src\test.html:43 → "margin"
+   - src\inn\test.html:17 → "margin"
+   - src\inn\test.html:43 → "margin"
+✅ container-queries: container-queries
+   Supported: chrome 105, chrome_android 105, edge 105, firefox 110, firefox_android 110, safari 16, safari_ios 16
+   - src\test.html:21 → "container queries"
+   - src\inn\test.html:21 → "container queries"
+❌ css-container-queries: css-container-queries
+   Missing: Unknown (feature not tracked in baseline)
+   - src\test.html:22 → "@container"
+   - src\inn\test.html:22 → "@container"
+✅ background-color: background-color
+   Supported: chrome 1, chrome_android 18, edge 12, firefox 1, firefox_android 4, safari 1, safari_ios 1
+   - src\test.html:24 → "background-color"
+   - src\style.css:10 → "background-color"
+   - src\inn\test.html:24 → "background-color"
+✅ color: color
+   Supported: chrome 1, chrome_android 18, edge 12, firefox 1, firefox_android 4, safari 1, safari_ios 1
+   - src\test.html:24 → "color"
+   - src\test.html:29 → "color"
+   - src\test.html:31 → "color"
+   - src\test.html:53 → "color"
+   - src\style.css:10 → "color"
+   - src\inn\test.html:24 → "color"
+   - src\inn\test.html:29 → "color"
+   - src\inn\test.html:31 → "color"
+   - src\inn\test.html:53 → "color"
+✅ padding: padding
+   Supported: chrome 1, chrome_android 18, edge 12, firefox 1, firefox_android 4, safari 1, safari_ios 1
+   - src\test.html:25 → "padding"
+   - src\test.html:44 → "padding"
+   - src\inn\test.html:25 → "padding"
+   - src\inn\test.html:44 → "padding"
+✅ functions: functions
+   Supported: chrome 1, chrome_android 18, edge 12, firefox 1, firefox_android 4, safari 1, safari_ios 1
+   - src\test.html:29 → "functions"
+   - src\inn\test.html:29 → "functions"
+✅ display: display
+   Supported: chrome 1, chrome_android 18, edge 12, firefox 1, firefox_android 4, safari 1, safari_ios 1
+   - src\test.html:31 → "display"
+   - src\test.html:36 → "display"
+   - src\test.html:53 → "display"
+   - src\inn\test.html:31 → "display"
+   - src\inn\test.html:36 → "display"
+   - src\inn\test.html:53 → "display"
+✅ subgrid: subgrid
+   Supported: chrome 117, chrome_android 117, edge 117, firefox 71, firefox_android 79, safari 16, safari_ios 16
+   - src\test.html:34 → "subgrid"
+   - src\test.html:38 → "subgrid"
+   - src\inn\test.html:34 → "subgrid"
+   - src\inn\test.html:38 → "subgrid"
+✅ grid: grid
+   Supported: chrome 57, chrome_android 57, edge 16, firefox 52, firefox_android 52, safari 10.1, safari_ios 10.3
+   - src\test.html:35 → "grid"
+   - src\test.html:36 → "grid"
+   - src\test.html:37 → "grid"
+   - src\test.html:38 → "grid"
+   - src\inn\test.html:35 → "grid"
+   - src\inn\test.html:36 → "grid"
+   - src\inn\test.html:37 → "grid"
+   - src\inn\test.html:38 → "grid"
+✅ logical-properties: logical-properties
+   Supported: chrome 89, chrome_android 89, edge 89, firefox 66, firefox_android 66, safari 15, safari_ios 15
+   - src\test.html:41 → "logical properties"
+   - src\inn\test.html:41 → "logical properties"
+✅ navigator: navigator
+   Supported: chrome 1, chrome_android 18, edge 12, firefox 1, firefox_android 4, safari 1, safari_ios 1
+   - src\script.js:13 → "navigator"
+✅ web-bluetooth: web-bluetooth
+   Supported: chrome 70, chrome_android 56, edge 79
+   - src\script.js:13 → "navigator.bluetooth"
+❗ Some features are not safe to use.
+
+📄 Log written to: log.txt
+📄 Report written to: report.json
+
