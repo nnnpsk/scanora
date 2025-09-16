@@ -1,3 +1,7 @@
+Note: This project uses standard Unicode symbols / emojis (e.g., ✅, ⚠️).  
+These are part of the Unicode Standard and subject to the Unicode Terms of Use.  
+No proprietary emoji artwork or special graphics are included or distributed in this project.
+
 Portions of this project incorporate data from the Baseline project  
 (https://github.com/web-platform-dx/web-features), licensed under the  
 Apache License, Version 2.0.
