@@ -13,8 +13,9 @@ const webFeatures = webFeaturesPackage.features;
 const now = new Date();
 const timestamp = now.toISOString().replace(/[-:T.Z]/g, '').slice(2, 17) + now.getMilliseconds().toString().padStart(3, '0');
 
+
 // --- Globals ---
-const IGNORE_PATHS = ['feature-scan.js', 'node_modules/**', 'dist/**'];
+// const DEFAULT_IGNORES = ['bin/scano.js','feature-scan.js', 'node_modules/**', 'dist/**'];
 const LOG_FILE = `scano_log_${timestamp}.log`;
 const REPORT_FILE = `scano_report_${timestamp}.json`;
 
@@ -405,15 +406,49 @@ function reportFeatures(detectedList, scannedFiles = []) {
 }
 
 // --- Entry Point ---
-(async function main() {
+/**
+ * @param {Object} options
+ * @param {string} options.inputPath - Folder or base path to scan
+ * @param {string|null} options.file - Optional manifest/requirements file
+ * @param {string[]} options.ignore - Additional ignore patterns
+ */
+async function mainScan({ inputPath, file, ignore }) {
   console.log(chalk.cyan.bold('🌐 Running Web Feature Baseline Scan...\n'));
+  // console.log('ignore-list =', ignore);
 
   const keywordMap = buildKeywordMap();
+  // const combinedIgnores = [...DEFAULT_IGNORES, ...(ignore || [])];
+  let files = [];
 
-  const files = glob.sync('**/*.{js,css,html}', {
-    ignore: IGNORE_PATHS,
-    nodir: true,
-  });
+  if (file) {
+  const filePath = path.resolve(inputPath, file);
+  if (!fs.existsSync(filePath)) {
+    console.error(chalk.red(`❌ File "${file}" not found.`));
+    process.exit(1);
+  }
+
+  const ext = path.extname(filePath).toLowerCase();
+
+  if (['.js', '.css', '.html'].includes(ext)) {
+    // single source file
+    files = [filePath];
+  } else {
+    // manifest file listing other files
+    const content = fs.readFileSync(filePath, 'utf-8');
+    files = content
+      .split(/\r?\n/)
+      .map(line => line.trim())
+      .filter(line => line !== '');
+  }
+} else {
+      files = glob.sync('**/*.{js,css,html}', {
+      cwd: inputPath,
+      absolute: true,
+      nodir: true,
+      // ignore: combinedIgnores,
+      ignore: ignore,
+    });
+  }
 
   scannedFiles = files;
 
@@ -464,6 +499,7 @@ function reportFeatures(detectedList, scannedFiles = []) {
 
 
   reportFeatures(detected, scannedFiles);
-})();
+}
 
+module.exports = { mainScan };
 
