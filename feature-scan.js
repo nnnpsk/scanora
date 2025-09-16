@@ -10,10 +10,13 @@ const stripAnsi = require('strip-ansi').default;
 const webFeaturesPackage = require('web-features');
 const webFeatures = webFeaturesPackage.features;
 
+const now = new Date();
+const timestamp = now.toISOString().replace(/[-:T.Z]/g, '').slice(2, 17) + now.getMilliseconds().toString().padStart(3, '0');
+
 // --- Globals ---
 const IGNORE_PATHS = ['feature-scan.js', 'node_modules/**', 'dist/**'];
-const LOG_FILE = 'log.txt';
-const REPORT_FILE = 'report.json';
+const LOG_FILE = `scano_log_${timestamp}.log`;
+const REPORT_FILE = `report_${timestamp}.json`;
 
 let logBuffer = '';
 let scannedFiles = [];
@@ -462,3 +465,4 @@ function reportFeatures(detectedList, scannedFiles = []) {
 
   reportFeatures(detected, scannedFiles);
 })();
+
