@@ -16,7 +16,7 @@ const timestamp = now.toISOString().replace(/[-:T.Z]/g, '').slice(2, 17) + now.g
 // --- Globals ---
 const IGNORE_PATHS = ['feature-scan.js', 'node_modules/**', 'dist/**'];
 const LOG_FILE = `scano_log_${timestamp}.log`;
-const REPORT_FILE = `report_${timestamp}.json`;
+const REPORT_FILE = `scano_report_${timestamp}.json`;
 
 let logBuffer = '';
 let scannedFiles = [];
@@ -465,4 +465,5 @@ function reportFeatures(detectedList, scannedFiles = []) {
 
   reportFeatures(detected, scannedFiles);
 })();
+
 
