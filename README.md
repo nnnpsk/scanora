@@ -4,13 +4,23 @@
 
 `scanora` is a CLI tool that scans JavaScript projects to detect baseline web features used in codebase. It helps developers identify browser compatibility concerns by analyzing feature usage.
 
----
-
 ## Installation
 
-Install it globally using npm:
+1) Install it globally using npm:  
+  `npm install -g scanora`  
 
-`npm install -g scanora`
+    (or)
+
+3) Clone & docker it  
+  `git clone https://github.com/nnnpsk/scanora.git`  
+  `cd scanora`  
+  `docker build -t scanora .`  
+  `docker run -it scanora`  
+
+    (or)
+
+3) Docker Pull  
+   `docker pull sasipalanin/scanora` , to use in CI/CD 
 
 ---
 
