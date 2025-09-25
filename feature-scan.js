@@ -502,4 +502,3 @@ async function mainScan({ inputPath, file, ignore }) {
 }
 
 module.exports = { mainScan };
-

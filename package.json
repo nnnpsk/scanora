@@ -1,7 +1,7 @@
 {
-  "name": "baseline-scan",
+  "name": "scanora",
   "version": "1.0.0",
-  "description": "Install nodejx from https://nodejs.org/en/download",
+  "description": "Baseline Webfeature scan",
   "main": "feature-scan.js",
   "bin": {
     "scano": "./bin/scano.js"
@@ -10,8 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "nnnpsk",
+  "license": "(MIT AND Apache-2.0)",
   "dependencies": {
     "acorn": "^8.15.0",
     "acorn-walk": "^8.3.4",

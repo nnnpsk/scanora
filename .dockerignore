@@ -1,0 +1,12 @@
+Dockerfile
+README.md
+README
+docs/
+examples/
+coverage/
+scano_log*.log
+scano_report*.json
+.dockerignore
+.git
+.gitignore
+*.tgz

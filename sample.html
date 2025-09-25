@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Missing Browser Support</title>
+  <style>
+    /* CSS :has() selector, missing in Safari */
+    div:has(.highlight) {
+      border: 2px solid red;
+    }
+
+    /* CSS @layer, missing in older browsers */
+    @layer components {
+      button {
+        background: lightblue;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="highlight">Highlight me!</div>
+  <button>Test Button</button>
+</body>
+</html>
