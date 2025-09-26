@@ -1,8 +1,16 @@
-# scanora
+# Scanora
 
-**Baseline WebFeature Scan Tool**
+**Scanora** is a command-line tool that helps web developers build resilient, future-proof applications by detecting the use of modern and experimental web platform features. It checks those features against up-to-date browser compatibility data and reports which are safe to use based on current support.
 
-`scanora` is a CLI tool that scans JavaScript projects to detect baseline web features used in codebase. It helps developers identify browser compatibility concerns by analyzing feature usage.
+This tool makes it easier to align your codebase with the [web-features](https://www.npmjs.com/package/web-features), ensuring a better experience for users across different browsers and platforms.
+
+## What It Does
+
+- Scans `.js`, `.css`, and `.html` files recursively in your project directory.
+- Reports whether each feature is safe or unsafe based on Web Baseline support.
+- Outputs a detailed JSON report and a clean log file.
+- Handles JavaScript parsing errors gracefully using Acorn.
+- Extensible via custom keyword mappings and overrides.
 
 ## Installation
 
