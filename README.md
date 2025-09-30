@@ -30,8 +30,6 @@ This tool makes it easier to align your codebase with the [web-features](https:/
 3) Docker Pull  
    `docker pull sasipalanin/scanora` , to use in CI/CD 
 
----
-
 ## Usage 
 
 ```bash
@@ -59,3 +57,8 @@ Notes:
   - Paths are relative to the scan target (default is current directory)
   - Directories are expanded to match all files inside (e.g. src => src/**)
   - Use quotes for comma-separated ignore values to avoid shell parsing issues
+```
+
+## Demo
+
+[![Watch the demo](https://img.youtube.com/vi/Q7meXCWdEsA/hqdefault.jpg)](https://www.youtube.com/watch?v=Q7meXCWdEsA)
