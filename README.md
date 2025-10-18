@@ -56,7 +56,7 @@ Ignore Options:
 Other:
   scano --version                       Show version
   scano help                            Show help
-  scano summ <scan_report_xx.json>      Generate a summarization report using Claude(V1.1.0)
+  scano summ <scan_report_xx.json>      Generate a summarization report using Claude(in scanoraV1.1.0)
 
 Notes:
   - Paths are relative to the scan target (default is current directory)
