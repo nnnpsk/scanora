@@ -41,12 +41,47 @@ async function run() {
     alias: { f: 'file', i: 'ignore', v: 'version', h: 'help' },
   });
 
+  // summ report generation-starts
+  if (args._[0] === 'summ') {
+    const filePath = args._[1];
+
+    if (!filePath) {
+    console.error('Error: Please provide a JSON file to send.');
+    process.exit(1);
+    }
+
+    const summScript = path.resolve(__dirname, 'summ.js');
+    const { spawn } = require('child_process');
+    const child = spawn('node', [summScript, filePath], {
+      stdio: 'inherit',
+    });
+
+    child.on('exit', code => process.exit(code));
+    return;
+  }
+  // summ report generation-ends
+
+  //validate the command args-starts
+  const allowedCommands = ['help', 'summ'];
+  const firstArg = args._[0];
+
+  if (
+    firstArg &&
+    !allowedCommands.includes(firstArg) &&
+    !fs.existsSync(path.resolve(firstArg))
+  ) {
+    console.error(`Error: Unrecognized command or path "${firstArg}".`);
+    console.log(`Run "scano help" to see available options.`);
+    process.exit(1);
+  }
+  //validate the command args-ends
+
   const scanTarget = args._[0] || '.';
   const inputPath = path.resolve(scanTarget);
   const file = args.file || null;
 
   // default ignore list
-  const DEFAULT_IGNORES = ['bin/scano.js','feature-scan.js', 'node_modules/**', 'dist/**'];
+  const DEFAULT_IGNORES = ['bin/scano.js', 'bin/summ.js', 'feature-scan.js', 'node_modules/**', 'dist/**'];
 
   // Handle --ignore
   let ignore = [];
@@ -87,6 +122,7 @@ Ignore Options:
 Other:
   scano --version                       Show version
   scano help                            Show help
+  scano summ <scan_report_xx.json>      Generate a summarization report using Claude
 
 Notes:
   - Paths are relative to the scan target (default is current directory)
