@@ -4,11 +4,15 @@
 
 This tool makes it easier to align your codebase with the [web-features](https://www.npmjs.com/package/web-features), ensuring a better experience for users across different browsers and platforms.
 
+- V1.0.0- Initial  
+- V1.1.0- Added Browser compatibility reporter using AWS Bedrock(Claude); Note: Claude reporter is not available in docker image
+  
 ## What It Does
 
 - Scans `.js`, `.css`, and `.html` files recursively in your project directory.
 - Reports whether each feature is safe or unsafe based on Web Baseline support.
 - Outputs a detailed JSON report and a clean log file.
+- Creates a Browser Compatibility Matrix report using Claude via AWS Bedrock(`scano summ <file.json>`)
 - Handles JavaScript parsing errors gracefully using Acorn.
 - Extensible via custom keyword mappings and overrides.
 
@@ -52,6 +56,7 @@ Ignore Options:
 Other:
   scano --version                       Show version
   scano help                            Show help
+  scano summ <scan_report_xx.json>      Generate a summarization report using Claude(V1.1.0)
 
 Notes:
   - Paths are relative to the scan target (default is current directory)
